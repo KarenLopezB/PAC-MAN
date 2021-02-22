@@ -27,6 +27,12 @@ yFantasma1 = 0.5
 xFantasma = 0.0
 yFantasma = 0.0
 
+xFantasma2 = -0.5
+yFantasma2 = 0.5
+
+xFantasma3 = 1.0
+yFantasma3 = -0.2
+
 xObstaculo5 = -1
 yObstaculo5 = 0.0
 
@@ -122,6 +128,10 @@ def actualizar(window):
 
     global xFantasma
     global yFantasma
+    global xFantasma2
+    global yFantasma2
+    global xFantasma3
+    global yFantasma3
 
 
     estadoIzquierda = glfw.get_key(window, glfw.KEY_LEFT)
@@ -150,10 +160,21 @@ def actualizar(window):
     xFantasmaR1 = cos(random.random())
     xFantasma1 = xFantasma1 -0.01 * xFantasmaR1
 
-    yFantasmaR = sin(random.random()/2)
-    yFantasma = yFantasma +0.005 * yFantasmaR
-    xFantasmaR = cos(random.random()) 
-    xFantasma = xFantasma * xFantasmaR
+    yFantasmaR = sin(random.random())
+    yFantasma = yFantasma1 -0.005 * yFantasmaR1
+    xFantasmaR = cos(random.random())
+    xFantasma = xFantasma +0.001 * xFantasmaR
+
+    
+    yFantasmaR2 = sin(random.random())
+    yFantasma2 = yFantasma2 -0.005 * yFantasmaR2
+    xFantasmaR2 = cos(random.random())
+    xFantasma2 = xFantasma2 + 0.001 * xFantasmaR2
+
+    yFantasmaR3 = random.random()
+    yFantasma3 = yFantasma3 -0.005 * yFantasmaR3
+    xFantasmaR3 = random.random()
+    xFantasma3 = xFantasma3 * cos(xFantasmaR3)
 
     
   
@@ -539,6 +560,251 @@ def dibujarPacman():
     glEnd()
     glPopMatrix()
 
+def dibujarPacmanAzul():
+    
+
+    global colisionando
+    global xFantasma2
+    global yFantasma2
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.0, 0.0, 2.0)
+    #glVertex3f(0.03,0.0,0.0)
+    #glVertex3f(0.015,-0.05,0.0)
+    #glVertex3f(0.06,0.0,0.0)
+    glVertex3f(-0.075,-0.08,0.0)
+    glVertex3f(0.07,-0.08,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/16,sin(angulo)/16,0.0) 
+    
+
+    
+    glEnd()
+    glPopMatrix()
+
+
+    
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    #glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_TRIANGLES)
+   
+
+
+    glVertex3f(-0.072,-0.08,0.0)
+    glVertex3f(-0.042,-0.08,0.0)
+    glVertex3f(-0.057,-0.12,0.0)
+
+    glVertex3f(-0.045,-0.08,0.0)
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(-0.03,-0.12,0.0)
+
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.0,-0.12,0.0)
+
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.0225,-0.12,0.0)
+
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.072,-0.08,0.0)
+    glVertex3f(0.05,-0.12,0.0)
+    
+    
+    
+  
+    glEnd()
+    glPopMatrix()
+   
+
+
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 -0.03,sin(angulo)/60,0.0) 
+     
+    glEnd()
+    glPopMatrix()
+
+
+
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 + 0.03,sin(angulo)/60,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 + 0.04,sin(angulo)/110,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xFantasma2,yFantasma2, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 -0.02,sin(angulo)/110,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()   
+    
+    
+
+
+def dibujarPacmanAzul2():
+    
+
+    global colisionando
+    global xFantasma3
+    global yFantasma3
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+    
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.5, 0.5, 0.5)
+    #glVertex3f(0.03,0.0,0.0)
+    #glVertex3f(0.015,-0.05,0.0)
+    #glVertex3f(0.06,0.0,0.0)
+    glVertex3f(-0.075,-0.08,0.0)
+    glVertex3f(0.07,-0.08,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/16,sin(angulo)/16,0.0) 
+    
+
+    
+    glEnd()
+    glPopMatrix()
+
+
+    
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+ 
+    #glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_TRIANGLES)
+   
+
+
+    glVertex3f(-0.072,-0.08,0.0)
+    glVertex3f(-0.042,-0.08,0.0)
+    glVertex3f(-0.057,-0.12,0.0)
+
+    glVertex3f(-0.045,-0.08,0.0)
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(-0.03,-0.12,0.0)
+
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.0,-0.12,0.0)
+
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.0225,-0.12,0.0)
+
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.072,-0.08,0.0)
+    glVertex3f(0.05,-0.12,0.0)
+    
+    
+    
+  
+    glEnd()
+    glPopMatrix()
+   
+
+
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+   
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 -0.03,sin(angulo)/60,0.0) 
+     
+    glEnd()
+    glPopMatrix()
+
+
+
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 + 0.03,sin(angulo)/60,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+ 
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 + 0.04,sin(angulo)/110,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xFantasma3,yFantasma3, 0.0)
+
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 -0.02,sin(angulo)/110,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()   
+    
+
+    
+
+
 
 def bolitas1():
     global xbolitas
@@ -655,6 +921,8 @@ def dibujar():
     dibujarCarrito()
     dibujarPacmanVerde()
     dibujarPacman()
+    dibujarPacmanAzul()
+    dibujarPacmanAzul2()
 
 
 def main():
