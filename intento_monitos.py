@@ -7,6 +7,7 @@ import random
 
 from tkinter import *
 
+rotacionC=0
 xObstaculo = -0.65
 yObstaculo = 0.6
 
@@ -310,6 +311,7 @@ def actualizar(window):
     global direccion
     global desfase
     global rotacion
+    global rotacionC
 
     global xFantasma1
     global yFantasma1
@@ -330,26 +332,26 @@ def actualizar(window):
     if estadoIzquierda == glfw.PRESS and colisionando == False:
         xCarrito = xCarrito - 0.003
         direccion = 2
-        rotacion = 180 - desfase
+        rotacionC = 180 - desfase
     if estadoDerecha == glfw.PRESS and colisionando == False:
         xCarrito = xCarrito + 0.003
         direccion = 1
-        rotacion = 0 - desfase
+        rotacionC = 0 - desfase
     if estadoAbajo == glfw.PRESS and colisionando == False:
         yCarrito = yCarrito - 0.003
         direccion = 3
-        rotacion = 270 - desfase
+        rotacionC = 270 - desfase
     if estadoArriba == glfw.PRESS and colisionando == False:
         yCarrito = yCarrito + 0.003 
         direccion = 0
-        rotacion = 90 - desfase
+        rotacionC = 90 - desfase
     yFantasmaR1 =sin(random.random())
     yFantasma1 = yFantasma1 -0.005 * yFantasmaR1
     xFantasmaR1 = cos(random.random())
     xFantasma1 = xFantasma1 -0.01 * xFantasmaR1
 
     yFantasmaR = sin(random.random())
-    yFantasma = yFantasma1 -0.005 * yFantasmaR1
+    yFantasma = yFantasma1 +0.005 * yFantasmaR1
     xFantasmaR = cos(random.random())
     xFantasma = xFantasma +0.001 * xFantasmaR
 
@@ -1839,7 +1841,7 @@ def bolitas50():
         glPopMatrix()
 
 def boca():
- 
+    global rotacionC
     global colisionando
     global xCarrito
     global yCarrito
@@ -1847,7 +1849,7 @@ def boca():
     
     glPushMatrix()
     glTranslate(xCarrito, yCarrito, 0.0)
-    glRotate(rotacion + 90 ,0.0,0.0,1.0)
+    glRotate(rotacionC + 90 ,0.0,0.0,1.0)
     glScale(0.5,0.5,0.5)
     glBegin(GL_POLYGON)
     glColor3f(0.0, 0.0, 0.0)
@@ -1864,12 +1866,12 @@ def dibujarCarrito():
     global xCarrito
     global yCarrito
     global colisionando
-    global rotacion
+    global rotacionC
 
     glPushMatrix()
     glTranslate(xCarrito, yCarrito, 0.0)
     glScale(0.5,0.5,0.5)
-    glRotate(rotacion + 90 ,0.0,0.0,1.0)
+    glRotate(rotacionC + 90 ,0.0,0.0,1.0)
     glBegin(GL_POLYGON)
     glColor3f(0.0, 0.0, 0.0)
     #glBegin(GL_TRIANGLES)
