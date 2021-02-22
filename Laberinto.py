@@ -1,6 +1,7 @@
 from OpenGL.GL import *
 from glew_wish import *
 import glfw
+ 
 
 def paredes():
     #rutinas de dibujo
