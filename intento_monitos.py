@@ -391,7 +391,12 @@ def checar_colisiones():
         colisionando = True
     elif xCarrito + 0.05> xObstaculo8 - 0.15 and xCarrito - 0.05 < xObstaculo8 + 0.15 and yCarrito + 0.05 > yObstaculo8 - 0.15 and yCarrito - 0.05 < yObstaculo8 + 0.15:
         colisionando = True
-    
+    elif xCarrito + 0.05> xObstaculo9 - 0.15 and xCarrito - 0.05 < xObstaculo9 + 0.15 and yCarrito + 0.05 > yObstaculo9 - 0.15 and yCarrito - 0.05 < yObstaculo9 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo10 - 0.15 and xCarrito - 0.05 < xObstaculo10 + 0.15 and yCarrito + 0.05 > yObstaculo10 - 0.15 and yCarrito - 0.05 < yObstaculo10 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo11 - 0.15 and xCarrito - 0.05 < xObstaculo11 + 0.15 and yCarrito + 0.05 > yObstaculo11 - 0.15 and yCarrito - 0.05 < yObstaculo11 + 0.15:
+        colisionando = True
         
     elif xCarrito + 0.05> xbolitas1 - 0.05 and xCarrito - 0.05 < xbolitas1 + 0.05 and yCarrito + 0.05 > ybolitas1 - 0.05 and yCarrito - 0.05 < ybolitas1 + 0.05:
         obstaculoVivo1=False
@@ -2110,11 +2115,54 @@ def dibujarCarrito():
     glPopMatrix()
     boca()
 
+def letras():
+    glPushMatrix()
+    glBegin(GL_LINES)
+    glColor3f(0.8, 0.5, 0.3)
+    glVertex(-0.15, 0.15, 0.0)
+    glVertex(-0.15, -0.15, 0.0)
+    glVertex(0.05, 0.15, 0.0)
+    glVertex(0.05, -0.0, 0.0)
 
+    glVertex(-0.15, -0.0, 0.0)
+    glVertex(0.05, -0.0, 0.0)
+
+    glVertex(-0.15, 0.15, 0.0)
+    glVertex(0.05, 0.15, 0.0)
+
+    glVertex(0.05, 0.15, 0.0)
+    glVertex(0.05, 0.0, 0.0)
+    glEnd()
+    glPopMatrix()
+
+
+    glPushMatrix()
+    glBegin(GL_LINE_STRIP)
+    glColor3f(0.8, 0.5, 0.3)
+    glVertex(-0.15, 0.15, 0.0)
+    glVertex(-0.15, -0.15, 0.0)
+    glVertex(0.05, 0.15, 0.0)
+    glVertex(0.05, -0.0, 0.0)
+
+    glVertex(0.05, -0.15, 0.0)
+    glVertex(0.05, 0.15, 0.0)
+
+    glVertex(0.05, -0.15, 0.0)
+    glVertex(0.09, 0.15, 0.0)
+
+    glVertex(0.09, 0.15, 0.0)
+    glVertex(0.22, -0.15, 0.0)
+        #glVertex(0.05, 0.15, 0.0)
+   
+
+    glEnd()
+    glPopMatrix()
+
+    
 
 def dibujar():
     #rutinas de dibujo
-    
+    letras()
     bolitas1()
     bolitas2()
     bolitas3()
@@ -2167,6 +2215,10 @@ def dibujar():
     bolitas50()
     dibujarObstaculo()
     dibujarCarrito()
+    dibujarPacmanVerde()
+    dibujarPacman()
+    dibujarPacmanAzul()
+    dibujarPacmanAzul2()
     dibujarPacmanVerde()
     dibujarPacman()
     dibujarPacmanAzul()
