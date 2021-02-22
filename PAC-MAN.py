@@ -35,6 +35,9 @@ yFantasma3 = -0.2
 xFantasma4 = -0.5
 yFantasma4 = -0.5
 
+xFantasma5 = 0.8
+yFantasma5 = 0.5
+
 xObstaculo5 = -1
 yObstaculo5 = 0.0
 
@@ -383,6 +386,10 @@ def checar_colisiones():
     global yFantasma2
     global xFantasma3
     global yFantasma3
+    global xFantasma4
+    global yFantasma4
+    global xFantasma5
+    global yFantasma5
     
     #si extremaDerechaCarrito > extremaIquierdaCarrito
     if xCarrito + 0.05> xObstaculo2 - 0.15 and xCarrito - 0.05 < xObstaculo2 + 0.15 and yCarrito + 0.05 > yObstaculo2 - 0.15 and yCarrito - 0.05 < yObstaculo2 + 0.15:
@@ -450,7 +457,17 @@ def checar_colisiones():
     elif xCarrito + 0.05> xFantasma3 - 0.15 and xCarrito - 0.05 < xFantasma3 + 0.15 and yCarrito + 0.05 > yFantasma3 - 0.15 and yCarrito - 0.05 < yFantasma3 + 0.15:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
-        exit()       
+        exit()    
+
+    elif xCarrito + 0.05> xFantasma4 - 0.15 and xCarrito - 0.05 < xFantasma4 + 0.15 and yCarrito + 0.05 > yFantasma4 - 0.15 and yCarrito - 0.05 < yFantasma4 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True)        
+        colisionando = True
+        exit() 
+
+    elif xCarrito + 0.05> xFantasma5 - 0.15 and xCarrito - 0.05 < xFantasma5 + 0.15 and yCarrito + 0.05 > yFantasma5 - 0.15 and yCarrito - 0.05 < yFantasma5 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True)        
+        colisionando = True
+        exit()    
         #resetPosition()
 
         
@@ -633,6 +650,8 @@ def actualizar(window):
     global yFantasma3
     global xFantasma4
     global yFantasma4
+    global xFantasma5
+    global yFantasma5
 
     
     #playsound.playsound('pacman-intermission.mp3', True)
@@ -693,6 +712,10 @@ def actualizar(window):
     xFantasmaR4 = random.random()
     xFantasma4 = xFantasma4 * cos(xFantasmaR4)
 
+    yFantasmaR5 = random.random()
+    yFantasma5 = yFantasma5 -0.005 * yFantasmaR5
+    xFantasmaR5 = random.random()
+    xFantasma5 = xFantasma5 * cos(xFantasmaR5)
     
     checar_colisiones()
     #playsound.playsound('pacman-waka-waka.mp3', True)
@@ -947,6 +970,7 @@ def dibujarPacman():
     global colisionando
     global xFantasma
     global yFantasma
+    
     glPushMatrix()
     glTranslate(xFantasma,yFantasma, 0.0)
     glRotate(rotacion, 0.0, 0.0, 1.0)
@@ -1063,7 +1087,7 @@ def dibujarPacmanVerde2():
     glTranslate(xFantasma4,yFantasma4, 0.0)
     glRotate(rotacion, 0.0, 0.0, 1.0)
     glBegin(GL_POLYGON)
-    glColor3f(0.0, 1.0, 0.0)
+    glColor3f(1.0, 0.5, 0.0)
     #glVertex3f(0.03,0.0,0.0)
     #glVertex3f(0.015,-0.05,0.0)
     #glVertex3f(0.06,0.0,0.0)
@@ -1157,7 +1181,6 @@ def dibujarPacmanVerde2():
     
     glEnd()
     glPopMatrix()   
-
 
 def dibujarPacmanAzul():
     
@@ -1275,9 +1298,6 @@ def dibujarPacmanAzul():
     glEnd()
     glPopMatrix()   
     
-    
-
-
 def dibujarPacmanAzul2():
     
 
@@ -1398,6 +1418,121 @@ def dibujarPacmanAzul2():
    
     glEnd()
     glPopMatrix()   
+
+def dibujarPacmanAzul3():
+    
+
+    global colisionando
+    global xFantasma5
+    global yFantasma5
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+    
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.6, 0.0, 0.7)
+    #glVertex3f(0.03,0.0,0.0)
+    #glVertex3f(0.015,-0.05,0.0)
+    #glVertex3f(0.06,0.0,0.0)
+    glVertex3f(-0.075,-0.08,0.0)
+    glVertex3f(0.07,-0.08,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/16,sin(angulo)/16,0.0) 
+    
+
+    
+    glEnd()
+    glPopMatrix()
+
+
+    
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+ 
+    #glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_TRIANGLES)
+   
+
+
+    glVertex3f(-0.072,-0.08,0.0)
+    glVertex3f(-0.042,-0.08,0.0)
+    glVertex3f(-0.057,-0.12,0.0)
+
+    glVertex3f(-0.045,-0.08,0.0)
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(-0.03,-0.12,0.0)
+
+    glVertex3f(-0.015,-0.08,0.0)
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.0,-0.12,0.0)
+
+    glVertex3f(0.015,-0.08,0.0)
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.0225,-0.12,0.0)
+
+    glVertex3f(0.045,-0.08,0.0)
+    glVertex3f(0.072,-0.08,0.0)
+    glVertex3f(0.05,-0.12,0.0)
+  
+    glEnd()
+    glPopMatrix()
+   
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+   
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 -0.03,sin(angulo)/60,0.0) 
+     
+    glEnd()
+    glPopMatrix()
+
+
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    
+    glBegin(GL_POLYGON)
+    glColor3f(1.0,1.0,1.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/60 + 0.03,sin(angulo)/60,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+ 
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 + 0.04,sin(angulo)/110,0.0) 
+    
+   
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xFantasma5,yFantasma5, 0.0)
+
+    glRotate(rotacion, 0.0, 0.0, 1.0)
+    glBegin(GL_POLYGON)
+    glColor3f(0.0,0.0,0.0)
+    for a in range (360):
+        angulo= (a*3.14159/180)
+        glVertex3f(cos(angulo)/110 -0.02,sin(angulo)/110,0.0)
+   
+    glEnd()
+    glPopMatrix()
 
 def bolitas1():
     global xbolitas1
@@ -2431,6 +2566,7 @@ def dibujar():
     dibujarPacmanAzul()
     dibujarPacmanAzul2()
     dibujarPacmanVerde2()
+    dibujarPacmanAzul3()
     #playsound.playsound('pacman-intermission.mp3', True)
 
 
