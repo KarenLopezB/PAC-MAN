@@ -4,7 +4,7 @@ import glfw
 from math import* 
 from random import randint
 import random 
-
+import playsound
 from tkinter import *
 
 rotacionC=0
@@ -267,6 +267,7 @@ xBala = 0
 yBala = 0
 anguloBala=0
 
+
 def checar_colisiones():
     global colisionando
     global bolitas1
@@ -374,38 +375,48 @@ def checar_colisiones():
 
     #si extremaDerechaCarrito > extremaIquierdaCarrito
     if xCarrito + 0.05> xObstaculo2 - 0.15 and xCarrito - 0.05 < xObstaculo2 + 0.15 and yCarrito + 0.05 > yObstaculo2 - 0.15 and yCarrito - 0.05 < yObstaculo2 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
         #obstaculoVivo=False
     elif xCarrito + 0.05> xObstaculo - 0.15 and xCarrito - 0.05 < xObstaculo + 0.15 and yCarrito + 0.05 > yObstaculo - 0.15 and yCarrito - 0.05 < yObstaculo + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
         #obstaculoVivo=False
     elif xCarrito + 0.05> xObstaculo3 - 0.15 and xCarrito - 0.05 < xObstaculo3 + 0.15 and yCarrito + 0.05 > yObstaculo3 - 0.15 and yCarrito - 0.05 < yObstaculo3 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo4 - 0.15 and xCarrito - 0.05 < xObstaculo4 + 0.15 and yCarrito + 0.05 > yObstaculo4 - 0.15 and yCarrito - 0.05 < yObstaculo4 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo5 - 0.15 and xCarrito - 0.05 < xObstaculo5 + 0.15 and yCarrito + 0.05 > yObstaculo5 - 0.15 and yCarrito - 0.05 < yObstaculo5 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo6 - 0.15 and xCarrito - 0.05 < xObstaculo6 + 0.15 and yCarrito + 0.05 > yObstaculo6 - 0.15 and yCarrito - 0.05 < yObstaculo6 + 0.15:
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo7 - 0.15 and xCarrito - 0.05 < xObstaculo7 + 0.15 and yCarrito + 0.05 > yObstaculo7 - 0.15 and yCarrito - 0.05 < yObstaculo7 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo8 - 0.15 and xCarrito - 0.05 < xObstaculo8 + 0.15 and yCarrito + 0.05 > yObstaculo8 - 0.15 and yCarrito - 0.05 < yObstaculo8 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo9 - 0.15 and xCarrito - 0.05 < xObstaculo9 + 0.15 and yCarrito + 0.05 > yObstaculo9 - 0.15 and yCarrito - 0.05 < yObstaculo9 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo10 - 0.15 and xCarrito - 0.05 < xObstaculo10 + 0.15 and yCarrito + 0.05 > yObstaculo10 - 0.15 and yCarrito - 0.05 < yObstaculo10 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True) 
         colisionando = True
         exit()
     elif xCarrito + 0.05> xObstaculo11 - 0.15 and xCarrito - 0.05 < xObstaculo11 + 0.15 and yCarrito + 0.05 > yObstaculo11 - 0.15 and yCarrito - 0.05 < yObstaculo11 + 0.15:
+        playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()
         #resetPosition()
@@ -566,8 +577,9 @@ def checar_colisiones():
         #obstaculoVivo=True
 
 
-
+#playsound.playsound('pacman-waka-waka-sound-seamless-loop-1-hour-edition.mp3', True)
 def actualizar(window):
+    
     global xCarrito
     global yCarrito
     global colisionando
@@ -596,19 +608,24 @@ def actualizar(window):
         xCarrito = xCarrito - 0.1
         direccion = 2
         rotacionC = 180 - desfase
+        #playsound.playsound('pacman-waka-waka.mp3', False)
+        #playsound.playsound('pacman-waka-waka.mp3', True)
     if estadoDerecha == glfw.PRESS and colisionando == False:
         xCarrito = xCarrito + 0.1
         direccion = 1
         rotacionC = 0 - desfase
+        #playsound.playsound('pacman-waka-waka.mp3', True)
     if estadoAbajo == glfw.PRESS and colisionando == False:
         yCarrito = yCarrito - 0.1
         direccion = 3
         rotacionC = 270 - desfase
+        #playsound.playsound('pacman-waka-waka.mp3', True)
     if estadoArriba == glfw.PRESS and colisionando == False:
         yCarrito = yCarrito + 0.1
         direccion = 0
         rotacionC = 90 - desfase
-
+        #playsound.playsound('pacman-waka-waka.mp3', True)
+    
     yFantasmaR1 =sin(random.random())
     yFantasma1 = yFantasma1 -0.005 * yFantasmaR1
     xFantasmaR1 = cos(random.random())
@@ -632,6 +649,7 @@ def actualizar(window):
 
     
     checar_colisiones()
+    #playsound.playsound('pacman-waka-waka.mp3', True)
     #checar_bolitas()
 
 
