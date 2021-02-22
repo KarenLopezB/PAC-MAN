@@ -28,39 +28,21 @@ def paredes():
     glVertex(-0.98, -1, 0.0)
     #EsquinaIzquierdaArriba
     glVertex(-0.78, 0.78, 0.0)
-    glVertex(-0.58, 0.78, 0.0)
-    glVertex(-0.58, 0.76, 0.0)
-    glVertex(-0.78, 0.76, 0.0)
-
-    glVertex(-0.78, 0.56, 0.0)
-    glVertex(-0.58, 0.56, 0.0)
-    glVertex(-0.58, 0.54, 0.0)
-    glVertex(-0.78, 0.54, 0.0)
-
-    glVertex(-0.58, 0.78, 0.0)
     glVertex(-0.56, 0.78, 0.0)
     glVertex(-0.56, 0.54, 0.0)
-    glVertex(-0.58, 0.54, 0.0)
+    glVertex(-0.78, 0.54, 0.0)
     #RayaIzquierdaArriba
     glVertex(-0.36, 0.98, 0.0)
     glVertex(-0.34, 0.98, 0.0)
     glVertex(-0.34, 0.54, 0.0)
     glVertex(-0.36, 0.54, 0.0)
     #EsquinaDerechaArriba
+    
     glVertex(0.76, 0.78, 0.0)
-    glVertex(0.78, 0.78, 0.0)
-    glVertex(0.78, 0.58, 0.0)
-    glVertex(0.76, 0.58, 0.0)
-
-    glVertex(0.54, 0.58, 0.0)
-    glVertex(0.78, 0.58, 0.0)
-    glVertex(0.78, 0.56, 0.0)
-    glVertex(0.54, 0.56, 0.0)
-
     glVertex(0.54, 0.78, 0.0)
-    glVertex(0.56, 0.78, 0.0)
-    glVertex(0.56, 0.58, 0.0)
-    glVertex(0.54, 0.58, 0.0)
+    glVertex(0.54, 0.54, 0.0)
+    glVertex(0.76, 0.54, 0.0)
+
     #RayaDerechaArriba
     glVertex(0.32, 0.98, 0.0)
     glVertex(0.34, 0.98, 0.0)
@@ -72,40 +54,22 @@ def paredes():
     glVertex(0.98, -0.78, 0.0)
     glVertex(-0.98, -0.78, 0.0)
     #EsquinaIzquierdaAbajo
-    glVertex(-0.78, -0.36, 0.0)
-    glVertex(-0.76, -0.36, 0.0)
-    glVertex(-0.76, -0.56, 0.0)
-    glVertex(-0.78, -0.56, 0.0)
-
     glVertex(-0.78, -0.34, 0.0)
     glVertex(-0.56, -0.34, 0.0)
-    glVertex(-0.56, -0.36, 0.0)
-    glVertex(-0.78, -0.36, 0.0)
-    
-    glVertex(-0.56, -0.34, 0.0)
-    glVertex(-0.54, -0.34, 0.0)
-    glVertex(-0.54, -0.56, 0.0)
     glVertex(-0.56, -0.56, 0.0)
+    glVertex(-0.78, -0.56, 0.0)
+
     #RayaIzquierdaAbajo
     glVertex(-0.34, -0.34, 0.0)
     glVertex(-0.32, -0.34, 0.0)
     glVertex(-0.32, -0.76, 0.0)
     glVertex(-0.34, -0.76, 0.0)
     #EsquinaDerechaAbajo
-    glVertex(0.58, -0.34, 0.0)
-    glVertex(0.78, -0.34, 0.0)
-    glVertex(0.78, -0.36, 0.0)
-    glVertex(0.58, -0.36, 0.0)
-
-    glVertex(0.58, -0.56, 0.0)
-    glVertex(0.78, -0.56, 0.0)
-    glVertex(0.78, -0.58, 0.0)
-    glVertex(0.58, -0.58, 0.0)
-
     glVertex(0.56, -0.34, 0.0)
-    glVertex(0.58, -0.34, 0.0)
-    glVertex(0.58, -0.58, 0.0)
+    glVertex(0.78, -0.34, 0.0)
+    glVertex(0.78, -0.58, 0.0)
     glVertex(0.56, -0.58, 0.0)
+
     #RayaDerechaAbajo
     glVertex(0.34, -0.34, 0.0)
     glVertex(0.36, -0.34, 0.0)
@@ -135,18 +99,9 @@ def paredes():
 
     glVertex(-0.09, -0.34, 0.0)
     glVertex(0.11, -0.34, 0.0)
-    glVertex(0.11, -0.32, 0.0)
-    glVertex(-0.09, -0.32, 0.0)
-
-    glVertex(-0.34, -0.54, 0.0)
-    glVertex(-0.09, -0.54, 0.0)
-    glVertex(-0.09, -0.56, 0.0)
-    glVertex(-0.34, -0.56, 0.0)
-
-    glVertex(0.11, -0.54, 0.0)
-    glVertex(0.36, -0.54, 0.0)
-    glVertex(0.36, -0.56, 0.0)
     glVertex(0.11, -0.56, 0.0)
+    glVertex(-0.09, -0.56, 0.0)
+
 
     #CasitaFantasmasPacman
     glVertex(-0.34, 0.34, 0.0)
@@ -197,18 +152,9 @@ def paredes():
     glVertex(0.54, 0.10, 0.0)
 
     #RayasArribaCentro
-    glVertex(-0.34, 0.78, 0.0)
+
     glVertex(-0.09, 0.78, 0.0)
-    glVertex(-0.09, 0.76, 0.0)
-    glVertex(-0.34, 0.76, 0.0)
-
     glVertex(0.11, 0.78, 0.0)
-    glVertex(0.34, 0.78, 0.0)
-    glVertex(0.34, 0.76, 0.0)
-    glVertex(0.11, 0.76, 0.0)
-
-    glVertex(-0.09, 0.56, 0.0)
-    glVertex(0.11, 0.56, 0.0)
     glVertex(0.11, 0.54, 0.0)
     glVertex(-0.09, 0.54, 0.0)
 
