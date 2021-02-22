@@ -375,28 +375,41 @@ def checar_colisiones():
     #si extremaDerechaCarrito > extremaIquierdaCarrito
     if xCarrito + 0.05> xObstaculo2 - 0.15 and xCarrito - 0.05 < xObstaculo2 + 0.15 and yCarrito + 0.05 > yObstaculo2 - 0.15 and yCarrito - 0.05 < yObstaculo2 + 0.15:
         colisionando = True
+        exit()
         #obstaculoVivo=False
     elif xCarrito + 0.05> xObstaculo - 0.15 and xCarrito - 0.05 < xObstaculo + 0.15 and yCarrito + 0.05 > yObstaculo - 0.15 and yCarrito - 0.05 < yObstaculo + 0.15:
         colisionando = True
+        exit()
         #obstaculoVivo=False
     elif xCarrito + 0.05> xObstaculo3 - 0.15 and xCarrito - 0.05 < xObstaculo3 + 0.15 and yCarrito + 0.05 > yObstaculo3 - 0.15 and yCarrito - 0.05 < yObstaculo3 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo4 - 0.15 and xCarrito - 0.05 < xObstaculo4 + 0.15 and yCarrito + 0.05 > yObstaculo4 - 0.15 and yCarrito - 0.05 < yObstaculo4 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo5 - 0.15 and xCarrito - 0.05 < xObstaculo5 + 0.15 and yCarrito + 0.05 > yObstaculo5 - 0.15 and yCarrito - 0.05 < yObstaculo5 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo6 - 0.15 and xCarrito - 0.05 < xObstaculo6 + 0.15 and yCarrito + 0.05 > yObstaculo6 - 0.15 and yCarrito - 0.05 < yObstaculo6 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo7 - 0.15 and xCarrito - 0.05 < xObstaculo7 + 0.15 and yCarrito + 0.05 > yObstaculo7 - 0.15 and yCarrito - 0.05 < yObstaculo7 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo8 - 0.15 and xCarrito - 0.05 < xObstaculo8 + 0.15 and yCarrito + 0.05 > yObstaculo8 - 0.15 and yCarrito - 0.05 < yObstaculo8 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo9 - 0.15 and xCarrito - 0.05 < xObstaculo9 + 0.15 and yCarrito + 0.05 > yObstaculo9 - 0.15 and yCarrito - 0.05 < yObstaculo9 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo10 - 0.15 and xCarrito - 0.05 < xObstaculo10 + 0.15 and yCarrito + 0.05 > yObstaculo10 - 0.15 and yCarrito - 0.05 < yObstaculo10 + 0.15:
         colisionando = True
+        exit()
     elif xCarrito + 0.05> xObstaculo11 - 0.15 and xCarrito - 0.05 < xObstaculo11 + 0.15 and yCarrito + 0.05 > yObstaculo11 - 0.15 and yCarrito - 0.05 < yObstaculo11 + 0.15:
         colisionando = True
+        exit()
+        #resetPosition()
+
         
     elif xCarrito + 0.05> xbolitas1 - 0.05 and xCarrito - 0.05 < xbolitas1 + 0.05 and yCarrito + 0.05 > ybolitas1 - 0.05 and yCarrito - 0.05 < ybolitas1 + 0.05:
         obstaculoVivo1=False
@@ -580,21 +593,22 @@ def actualizar(window):
     estadoArriba = glfw.get_key(window, glfw.KEY_UP)
 
     if estadoIzquierda == glfw.PRESS and colisionando == False:
-        xCarrito = xCarrito - 0.01
+        xCarrito = xCarrito - 0.1
         direccion = 2
         rotacionC = 180 - desfase
     if estadoDerecha == glfw.PRESS and colisionando == False:
-        xCarrito = xCarrito + 0.01
+        xCarrito = xCarrito + 0.1
         direccion = 1
         rotacionC = 0 - desfase
     if estadoAbajo == glfw.PRESS and colisionando == False:
-        yCarrito = yCarrito - 0.01
+        yCarrito = yCarrito - 0.1
         direccion = 3
         rotacionC = 270 - desfase
     if estadoArriba == glfw.PRESS and colisionando == False:
-        yCarrito = yCarrito + 0.01
+        yCarrito = yCarrito + 0.1
         direccion = 0
         rotacionC = 90 - desfase
+
     yFantasmaR1 =sin(random.random())
     yFantasma1 = yFantasma1 -0.005 * yFantasmaR1
     xFantasmaR1 = cos(random.random())
@@ -603,13 +617,13 @@ def actualizar(window):
     yFantasmaR = sin(random.random())
     yFantasma = yFantasma1 +0.005 * yFantasmaR1
     xFantasmaR = cos(random.random())
-    xFantasma = xFantasma +0.001 * xFantasmaR
+    xFantasma = xFantasma +0.01 * xFantasmaR
 
     
     yFantasmaR2 = sin(random.random())
     yFantasma2 = yFantasma2 -0.005 * yFantasmaR2
     xFantasmaR2 = cos(random.random())
-    xFantasma2 = xFantasma2 + 0.001 * xFantasmaR2
+    xFantasma2 = xFantasma2 + 0.01 * xFantasmaR2
 
     yFantasmaR3 = random.random()
     yFantasma3 = yFantasma3 -0.005 * yFantasmaR3
