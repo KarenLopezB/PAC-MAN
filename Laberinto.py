@@ -214,6 +214,32 @@ def paredes():
 
     glEnd()
 
+def bolitas():
+    glColor3f(1.0,1.0,1.0)
+    glBegin(GL_POLYGON)
+    for x in range(360):
+        angulo = x * 3.14159 / 180.0
+        glVertex3f(cos(angulo) * 0.02 -0.88, sin(angulo) * 0.02 + 0.88, 0.0)
+
+    glEnd()
+
+def bolitas2():
+    glColor3f(1.0,1.0,1.0)
+    glBegin(GL_POLYGON)
+    for x in range(360):
+        angulo = x * 3.14159 / 180.0
+        glVertex3f(cos(angulo) * 0.02 -0.68, sin(angulo) * 0.02 + 0.88, 0.0)
+
+    glEnd()
+
+def bolitas3():
+    glColor3f(1.0,1.0,1.0)
+    glBegin(GL_POLYGON)
+    for x in range(360):
+        angulo = x * 3.14159 / 180.0
+        glVertex3f(cos(angulo) * 0.02 -0.48, sin(angulo) * 0.02 + 0.88, 0.0)
+    glEnd()
+
 def main():
     #inicia glfw
     if not glfw.init():
@@ -263,6 +289,9 @@ def main():
 
         #Dibujar
         paredes()
+        bolitas()
+        bolitas2()
+        bolitas3()
 
         #Preguntar si hubo entradas de perifericos
         #(Teclado, mouse, game pad, etc.)
