@@ -270,8 +270,108 @@ anguloBala=0
 def checar_colisiones():
     global colisionando
     global bolitas1
+    global bolitas2
+    global bolitas3
+    global bolitas4
+    global bolitas5
+    global bolitas6
+    global bolitas7
+    global bolitas8
+    global bolitas9
+    global bolitas10
+    global bolitas11
+    global bolitas12
+    global bolitas13
+    global bolitas14
+    global bolitas15
+    global bolitas16
+    global bolitas17
+    global bolitas18
+    global bolitas19
+    global bolitas20
+    global bolitas21
+    global bolitas22
+    global bolitas23
+    global bolitas24
+    global bolitas25
+    global bolitas26
+    global bolitas27
+    global bolitas28
+    global bolitas29
+    global bolitas30
+    global bolitas31
+    global bolitas32
+    global bolitas33
+    global bolitas34
+    global bolitas35
+    global bolitas36
+    global bolitas37
+    global bolitas38
+    global bolitas39
+    global bolitas40
+    global bolitas41
+    global bolitas42
+    global bolitas43
+    global bolitas44
+    global bolitas45
+    global bolitas46
+    global bolitas47
+    global bolitas48
+    global bolitas47
+    global bolitas48
+    global bolitas49
+    global bolitas50
     global obstaculoVivo1
     global obstaculoVivo2
+    global obstaculoVivo3
+    global obstaculoVivo4
+    global obstaculoVivo5
+    global obstaculoVivo6
+    global obstaculoVivo7
+    global obstaculoVivo8
+    global obstaculoVivo9
+    global obstaculoVivo10
+    global obstaculoVivo11
+    global obstaculoVivo12
+    global obstaculoVivo13
+    global obstaculoVivo14
+    global obstaculoVivo15
+    global obstaculoVivo16
+    global obstaculoVivo17
+    global obstaculoVivo18
+    global obstaculoVivo19
+    global obstaculoVivo20
+    global obstaculoVivo21
+    global obstaculoVivo22
+    global obstaculoVivo23
+    global obstaculoVivo24
+    global obstaculoVivo25
+    global obstaculoVivo26
+    global obstaculoVivo27
+    global obstaculoVivo28
+    global obstaculoVivo29
+    global obstaculoVivo30
+    global obstaculoVivo31
+    global obstaculoVivo32
+    global obstaculoVivo33
+    global obstaculoVivo34
+    global obstaculoVivo35
+    global obstaculoVivo36
+    global obstaculoVivo37
+    global obstaculoVivo38
+    global obstaculoVivo39
+    global obstaculoVivo40
+    global obstaculoVivo41
+    global obstaculoVivo42
+    global obstaculoVivo43
+    global obstaculoVivo44
+    global obstaculoVivo45
+    global obstaculoVivo46
+    global obstaculoVivo47
+    global obstaculoVivo48
+    global obstaculoVivo49
+    global obstaculoVivo50
+
     #si extremaDerechaCarrito > extremaIquierdaCarrito
     if xCarrito + 0.05> xObstaculo2 - 0.15 and xCarrito - 0.05 < xObstaculo2 + 0.15 and yCarrito + 0.05 > yObstaculo2 - 0.15 and yCarrito - 0.05 < yObstaculo2 + 0.15:
         colisionando = True
@@ -298,6 +398,151 @@ def checar_colisiones():
 
     elif xCarrito + 0.05> xbolitas2 - 0.05 and xCarrito - 0.05 < xbolitas2 + 0.05 and yCarrito + 0.05 > ybolitas2 - 0.05 and yCarrito - 0.05 < ybolitas2 + 0.05:
         obstaculoVivo2=False
+
+    elif xCarrito + 0.05> xbolitas3 - 0.05 and xCarrito - 0.05 < xbolitas3 + 0.05 and yCarrito + 0.05 > ybolitas3 - 0.05 and yCarrito - 0.05 < ybolitas3 + 0.05:
+        obstaculoVivo3=False
+
+    elif xCarrito + 0.05> xbolitas4 - 0.05 and xCarrito - 0.05 < xbolitas4 + 0.05 and yCarrito + 0.05 > ybolitas4 - 0.05 and yCarrito - 0.05 < ybolitas4 + 0.05:
+        obstaculoVivo4=False
+    
+    elif xCarrito + 0.05> xbolitas5 - 0.05 and xCarrito - 0.05 < xbolitas5 + 0.05 and yCarrito + 0.05 > ybolitas5 - 0.05 and yCarrito - 0.05 < ybolitas5 + 0.05:
+        obstaculoVivo5=False
+
+    elif xCarrito + 0.05> xbolitas6 - 0.05 and xCarrito - 0.05 < xbolitas6 + 0.05 and yCarrito + 0.05 > ybolitas6 - 0.05 and yCarrito - 0.05 < ybolitas6 + 0.05:
+        obstaculoVivo6=False
+
+    elif xCarrito + 0.05> xbolitas7 - 0.05 and xCarrito - 0.05 < xbolitas7 + 0.05 and yCarrito + 0.05 > ybolitas7 - 0.05 and yCarrito - 0.05 < ybolitas7 + 0.05:
+        obstaculoVivo7=False
+
+    elif xCarrito + 0.05> xbolitas8 - 0.05 and xCarrito - 0.05 < xbolitas8 + 0.05 and yCarrito + 0.05 > ybolitas8 - 0.05 and yCarrito - 0.05 < ybolitas8 + 0.05:
+        obstaculoVivo8=False
+
+    elif xCarrito + 0.05> xbolitas9 - 0.05 and xCarrito - 0.05 < xbolitas9 + 0.05 and yCarrito + 0.05 > ybolitas9 - 0.05 and yCarrito - 0.05 < ybolitas9 + 0.05:
+        obstaculoVivo9=False
+
+    elif xCarrito + 0.05> xbolitas10 - 0.05 and xCarrito - 0.05 < xbolitas10 + 0.05 and yCarrito + 0.05 > ybolitas10 - 0.05 and yCarrito - 0.05 < ybolitas10 + 0.05:
+        obstaculoVivo10=False
+    
+    elif xCarrito + 0.05> xbolitas11 - 0.05 and xCarrito - 0.05 < xbolitas11 + 0.05 and yCarrito + 0.05 > ybolitas11 - 0.05 and yCarrito - 0.05 < ybolitas11 + 0.05:
+        obstaculoVivo11=False
+
+    elif xCarrito + 0.05> xbolitas12 - 0.05 and xCarrito - 0.05 < xbolitas12 + 0.05 and yCarrito + 0.05 > ybolitas12 - 0.05 and yCarrito - 0.05 < ybolitas12 + 0.05:
+        obstaculoVivo12=False
+
+    elif xCarrito + 0.05> xbolitas13 - 0.05 and xCarrito - 0.05 < xbolitas13 + 0.05 and yCarrito + 0.05 > ybolitas13 - 0.05 and yCarrito - 0.05 < ybolitas13 + 0.05:
+        obstaculoVivo13=False
+
+    elif xCarrito + 0.05> xbolitas14 - 0.05 and xCarrito - 0.05 < xbolitas14 + 0.05 and yCarrito + 0.05 > ybolitas14 - 0.05 and yCarrito - 0.05 < ybolitas14 + 0.05:
+        obstaculoVivo14=False
+
+    elif xCarrito + 0.05> xbolitas15 - 0.05 and xCarrito - 0.05 < xbolitas15 + 0.05 and yCarrito + 0.05 > ybolitas15 - 0.05 and yCarrito - 0.05 < ybolitas15 + 0.05:
+        obstaculoVivo15=False
+
+    elif xCarrito + 0.05> xbolitas16 - 0.05 and xCarrito - 0.05 < xbolitas16 + 0.05 and yCarrito + 0.05 > ybolitas16 - 0.05 and yCarrito - 0.05 < ybolitas16 + 0.05:
+        obstaculoVivo16=False
+    
+    elif xCarrito + 0.05> xbolitas17 - 0.05 and xCarrito - 0.05 < xbolitas17 + 0.05 and yCarrito + 0.05 > ybolitas17 - 0.05 and yCarrito - 0.05 < ybolitas17 + 0.05:
+        obstaculoVivo17=False
+
+    elif xCarrito + 0.05> xbolitas18 - 0.05 and xCarrito - 0.05 < xbolitas18 + 0.05 and yCarrito + 0.05 > ybolitas18 - 0.05 and yCarrito - 0.05 < ybolitas18 + 0.05:
+        obstaculoVivo18=False
+
+    elif xCarrito + 0.05> xbolitas19 - 0.05 and xCarrito - 0.05 < xbolitas19 + 0.05 and yCarrito + 0.05 > ybolitas19 - 0.05 and yCarrito - 0.05 < ybolitas19 + 0.05:
+        obstaculoVivo19=False
+
+    elif xCarrito + 0.05> xbolitas20 - 0.05 and xCarrito - 0.05 < xbolitas20 + 0.05 and yCarrito + 0.05 > ybolitas20 - 0.05 and yCarrito - 0.05 < ybolitas20 + 0.05:
+        obstaculoVivo20=False
+
+    elif xCarrito + 0.05> xbolitas21 - 0.05 and xCarrito - 0.05 < xbolitas21 + 0.05 and yCarrito + 0.05 > ybolitas21 - 0.05 and yCarrito - 0.05 < ybolitas21 + 0.05:
+        obstaculoVivo21=False
+
+    elif xCarrito + 0.05> xbolitas22 - 0.05 and xCarrito - 0.05 < xbolitas22 + 0.05 and yCarrito + 0.05 > ybolitas22 - 0.05 and yCarrito - 0.05 < ybolitas22 + 0.05:
+        obstaculoVivo22=False
+    
+    elif xCarrito + 0.05> xbolitas23 - 0.05 and xCarrito - 0.05 < xbolitas23 + 0.05 and yCarrito + 0.05 > ybolitas23 - 0.05 and yCarrito - 0.05 < ybolitas23 + 0.05:
+        obstaculoVivo23=False
+
+    elif xCarrito + 0.05> xbolitas24 - 0.05 and xCarrito - 0.05 < xbolitas24 + 0.05 and yCarrito + 0.05 > ybolitas24 - 0.05 and yCarrito - 0.05 < ybolitas24 + 0.05:
+        obstaculoVivo24=False
+
+    elif xCarrito + 0.05> xbolitas25 - 0.05 and xCarrito - 0.05 < xbolitas25 + 0.05 and yCarrito + 0.05 > ybolitas25 - 0.05 and yCarrito - 0.05 < ybolitas25 + 0.05:
+        obstaculoVivo25=False
+
+    elif xCarrito + 0.05> xbolitas26 - 0.05 and xCarrito - 0.05 < xbolitas26 + 0.05 and yCarrito + 0.05 > ybolitas26 - 0.05 and yCarrito - 0.05 < ybolitas26 + 0.05:
+        obstaculoVivo26=False
+
+    elif xCarrito + 0.05> xbolitas27 - 0.05 and xCarrito - 0.05 < xbolitas27 + 0.05 and yCarrito + 0.05 > ybolitas27 - 0.05 and yCarrito - 0.05 < ybolitas27 + 0.05:
+        obstaculoVivo27=False
+
+    elif xCarrito + 0.05> xbolitas28 - 0.05 and xCarrito - 0.05 < xbolitas28 + 0.05 and yCarrito + 0.05 > ybolitas28 - 0.05 and yCarrito - 0.05 < ybolitas28 + 0.05:
+        obstaculoVivo28=False
+    
+    elif xCarrito + 0.05> xbolitas29 - 0.05 and xCarrito - 0.05 < xbolitas29 + 0.05 and yCarrito + 0.05 > ybolitas29 - 0.05 and yCarrito - 0.05 < ybolitas29 + 0.05:
+        obstaculoVivo29=False
+
+    elif xCarrito + 0.05> xbolitas30 - 0.05 and xCarrito - 0.05 < xbolitas30 + 0.05 and yCarrito + 0.05 > ybolitas30 - 0.05 and yCarrito - 0.05 < ybolitas30 + 0.05:
+        obstaculoVivo30=False
+
+    elif xCarrito + 0.05> xbolitas31 - 0.05 and xCarrito - 0.05 < xbolitas31 + 0.05 and yCarrito + 0.05 > ybolitas31 - 0.05 and yCarrito - 0.05 < ybolitas31 + 0.05:
+        obstaculoVivo31=False
+
+    elif xCarrito + 0.05> xbolitas32 - 0.05 and xCarrito - 0.05 < xbolitas32 + 0.05 and yCarrito + 0.05 > ybolitas32 - 0.05 and yCarrito - 0.05 < ybolitas32 + 0.05:
+        obstaculoVivo32=False
+
+    elif xCarrito + 0.05> xbolitas33 - 0.05 and xCarrito - 0.05 < xbolitas33 + 0.05 and yCarrito + 0.05 > ybolitas33 - 0.05 and yCarrito - 0.05 < ybolitas33 + 0.05:
+        obstaculoVivo33=False
+
+    elif xCarrito + 0.05> xbolitas34 - 0.05 and xCarrito - 0.05 < xbolitas34 + 0.05 and yCarrito + 0.05 > ybolitas34 - 0.05 and yCarrito - 0.05 < ybolitas34 + 0.05:
+        obstaculoVivo34=False
+    
+    elif xCarrito + 0.05> xbolitas35 - 0.05 and xCarrito - 0.05 < xbolitas35 + 0.05 and yCarrito + 0.05 > ybolitas35 - 0.05 and yCarrito - 0.05 < ybolitas35 + 0.05:
+        obstaculoVivo35=False
+
+    elif xCarrito + 0.05> xbolitas36 - 0.05 and xCarrito - 0.05 < xbolitas36 + 0.05 and yCarrito + 0.05 > ybolitas36 - 0.05 and yCarrito - 0.05 < ybolitas36 + 0.05:
+        obstaculoVivo36=False
+
+    elif xCarrito + 0.05> xbolitas37 - 0.05 and xCarrito - 0.05 < xbolitas37 + 0.05 and yCarrito + 0.05 > ybolitas37 - 0.05 and yCarrito - 0.05 < ybolitas37 + 0.05:
+        obstaculoVivo37=False
+
+    elif xCarrito + 0.05> xbolitas38 - 0.05 and xCarrito - 0.05 < xbolitas38 + 0.05 and yCarrito + 0.05 > ybolitas38 - 0.05 and yCarrito - 0.05 < ybolitas38 + 0.05:
+        obstaculoVivo38=False
+
+    elif xCarrito + 0.05> xbolitas39 - 0.05 and xCarrito - 0.05 < xbolitas39 + 0.05 and yCarrito + 0.05 > ybolitas39 - 0.05 and yCarrito - 0.05 < ybolitas39 + 0.05:
+        obstaculoVivo39=False
+
+    elif xCarrito + 0.05> xbolitas40 - 0.05 and xCarrito - 0.05 < xbolitas40 + 0.05 and yCarrito + 0.05 > ybolitas40 - 0.05 and yCarrito - 0.05 < ybolitas40 + 0.05:
+        obstaculoVivo40=False
+    
+    elif xCarrito + 0.05> xbolitas41 - 0.05 and xCarrito - 0.05 < xbolitas41 + 0.05 and yCarrito + 0.05 > ybolitas41 - 0.05 and yCarrito - 0.05 < ybolitas41 + 0.05:
+        obstaculoVivo41=False
+
+    elif xCarrito + 0.05> xbolitas42 - 0.05 and xCarrito - 0.05 < xbolitas42 + 0.05 and yCarrito + 0.05 > ybolitas42 - 0.05 and yCarrito - 0.05 < ybolitas42 + 0.05:
+        obstaculoVivo42=False
+
+    elif xCarrito + 0.05> xbolitas43 - 0.05 and xCarrito - 0.05 < xbolitas43 + 0.05 and yCarrito + 0.05 > ybolitas43 - 0.05 and yCarrito - 0.05 < ybolitas43 + 0.05:
+        obstaculoVivo43=False
+
+    elif xCarrito + 0.05> xbolitas44 - 0.05 and xCarrito - 0.05 < xbolitas44 + 0.05 and yCarrito + 0.05 > ybolitas44 - 0.05 and yCarrito - 0.05 < ybolitas44 + 0.05:
+        obstaculoVivo44=False
+
+    elif xCarrito + 0.05> xbolitas45 - 0.05 and xCarrito - 0.05 < xbolitas45 + 0.05 and yCarrito + 0.05 > ybolitas45 - 0.05 and yCarrito - 0.05 < ybolitas45 + 0.05:
+        obstaculoVivo45=False
+
+    elif xCarrito + 0.05> xbolitas46 - 0.05 and xCarrito - 0.05 < xbolitas46 + 0.05 and yCarrito + 0.05 > ybolitas46 - 0.05 and yCarrito - 0.05 < ybolitas46 + 0.05:
+        obstaculoVivo46=False
+    
+    elif xCarrito + 0.05> xbolitas47 - 0.05 and xCarrito - 0.05 < xbolitas47 + 0.05 and yCarrito + 0.05 > ybolitas47 - 0.05 and yCarrito - 0.05 < ybolitas47 + 0.05:
+        obstaculoVivo47=False
+
+    elif xCarrito + 0.05> xbolitas48 - 0.05 and xCarrito - 0.05 < xbolitas48 + 0.05 and yCarrito + 0.05 > ybolitas48 - 0.05 and yCarrito - 0.05 < ybolitas48 + 0.05:
+        obstaculoVivo48=False
+
+    elif xCarrito + 0.05> xbolitas49 - 0.05 and xCarrito - 0.05 < xbolitas49 + 0.05 and yCarrito + 0.05 > ybolitas49 - 0.05 and yCarrito - 0.05 < ybolitas49 + 0.05:
+        obstaculoVivo49=False
+
+    elif xCarrito + 0.05> xbolitas50 - 0.05 and xCarrito - 0.05 < xbolitas50 + 0.05 and yCarrito + 0.05 > ybolitas50 - 0.05 and yCarrito - 0.05 < ybolitas50 + 0.05:
+        obstaculoVivo50=False
+
     else:
         colisionando = False
         #obstaculoVivo=True
@@ -330,19 +575,19 @@ def actualizar(window):
     estadoArriba = glfw.get_key(window, glfw.KEY_UP)
 
     if estadoIzquierda == glfw.PRESS and colisionando == False:
-        xCarrito = xCarrito - 0.003
+        xCarrito = xCarrito - 0.01
         direccion = 2
         rotacionC = 180 - desfase
     if estadoDerecha == glfw.PRESS and colisionando == False:
-        xCarrito = xCarrito + 0.003
+        xCarrito = xCarrito + 0.01
         direccion = 1
         rotacionC = 0 - desfase
     if estadoAbajo == glfw.PRESS and colisionando == False:
-        yCarrito = yCarrito - 0.003
+        yCarrito = yCarrito - 0.01
         direccion = 3
         rotacionC = 270 - desfase
     if estadoArriba == glfw.PRESS and colisionando == False:
-        yCarrito = yCarrito + 0.003 
+        yCarrito = yCarrito + 0.01
         direccion = 0
         rotacionC = 90 - desfase
     yFantasmaR1 =sin(random.random())
@@ -365,14 +610,6 @@ def actualizar(window):
     yFantasma3 = yFantasma3 -0.005 * yFantasmaR3
     xFantasmaR3 = random.random()
     xFantasma3 = xFantasma3 * cos(xFantasmaR3)
-
-    
-  
-       
-  
-        
-    
-    
 
     
     checar_colisiones()
@@ -570,14 +807,9 @@ def dibujarPacmanVerde():
     glVertex3f(0.072,-0.08,0.0)
     glVertex3f(0.05,-0.12,0.0)
     
-    
-    
-  
     glEnd()
     glPopMatrix()
    
-
-
     glPushMatrix()
     glTranslate(xFantasma1,yFantasma1, 0.0)
     glRotate(rotacion, 0.0, 0.0, 1.0)
@@ -590,8 +822,6 @@ def dibujarPacmanVerde():
     glEnd()
     glPopMatrix()
 
-
-
     glPushMatrix()
     glTranslate(xFantasma1,yFantasma1, 0.0)
     glRotate(rotacion, 0.0, 0.0, 1.0)
@@ -600,11 +830,9 @@ def dibujarPacmanVerde():
     for a in range (360):
         angulo= (a*3.14159/180)
         glVertex3f(cos(angulo)/60 + 0.03,sin(angulo)/60,0.0) 
-    
    
     glEnd()
     glPopMatrix()
-
 
     glPushMatrix()
     glTranslate(xFantasma1,yFantasma1, 0.0)
@@ -615,7 +843,6 @@ def dibujarPacmanVerde():
         angulo= (a*3.14159/180)
         glVertex3f(cos(angulo)/110 + 0.04,sin(angulo)/110,0.0) 
     
-   
     glEnd()
     glPopMatrix()
 
@@ -628,10 +855,8 @@ def dibujarPacmanVerde():
         angulo= (a*3.14159/180)
         glVertex3f(cos(angulo)/110 -0.02,sin(angulo)/110,0.0) 
     
-   
     glEnd()
     glPopMatrix()   
-   
 
 def dibujarPacman():
 
@@ -655,19 +880,13 @@ def dibujarPacman():
         angulo= (a*3.14159/180)
         glVertex3f(cos(angulo)/16,sin(angulo)/16,0.0) 
     
-
-    
     glEnd()
     glPopMatrix()
-
-
     
     glPushMatrix()
     glTranslate(xFantasma,yFantasma, 0.0)
     #glRotate(rotacion, 0.0, 0.0, 1.0)
     glBegin(GL_TRIANGLES)
-   
-
 
     glVertex3f(-0.072,-0.08,0.0)
     glVertex3f(-0.042,-0.08,0.0)
