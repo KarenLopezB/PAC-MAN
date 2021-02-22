@@ -7,12 +7,40 @@ import random
 
 from tkinter import *
 
-xObstaculo = 0.0
+xObstaculo = -0.65
 yObstaculo = 0.6
 obstaculoVivo=True
+obstaculoVivo1=True
 
-xObstaculo2 = 0.5
-yObstaculo2 = -0.5
+xObstaculo2 = -0.15
+yObstaculo2 = 0.6
+
+xObstaculo3 = 0.45
+yObstaculo3 = 0.6
+
+xObstaculo4 = 0.95
+yObstaculo4 = 0.6
+
+xObstaculo5 = -1
+yObstaculo5 = 0.0
+
+xObstaculo6 = -0.45
+yObstaculo6 = 0.0
+
+xObstaculo7 =0.4
+yObstaculo7 = 0.0
+
+xObstaculo8 = 0.7
+yObstaculo8 = 0.0
+
+xObstaculo9 = -0.45
+yObstaculo9 = -0.5
+
+xObstaculo10 =0.4
+yObstaculo10 = 0.0
+
+xObstaculo11 = 0.7
+yObstaculo11 = 0.0
 
 xCarrito = 0.0
 yCarrito = -0.8
@@ -28,6 +56,12 @@ desfase = 5900
 xbolitas=-0.88
 ybolitas=0.88
 
+xbolitas2=-0.48
+ybolitas2=0.88
+
+xbolitas3=-0.28
+ybolitas3=0.88
+
 xBala = 0
 yBala = 0
 anguloBala=0
@@ -36,13 +70,33 @@ def checar_colisiones():
     global colisionando
     global bolitas1
     global obstaculoVivo
+    global obstaculoVivo1
     #si extremaDerechaCarrito > extremaIquierdaCarrito
-    if xCarrito + 0.05> xObstaculo - 0.15 and xCarrito - 0.05 < xObstaculo + 0.15 and yCarrito + 0.05 > yObstaculo - 0.15 and yCarrito - 0.05 < yObstaculo + 0.15:
+    if xCarrito + 0.05> xObstaculo2 - 0.15 and xCarrito - 0.05 < xObstaculo2 + 0.15 and yCarrito + 0.05 > yObstaculo2 - 0.15 and yCarrito - 0.05 < yObstaculo2 + 0.15:
         colisionando = True
-        obstaculoVivo=False
+        #obstaculoVivo=False
+    elif xCarrito + 0.05> xObstaculo - 0.15 and xCarrito - 0.05 < xObstaculo + 0.15 and yCarrito + 0.05 > yObstaculo - 0.15 and yCarrito - 0.05 < yObstaculo + 0.15:
+        colisionando = True
+        #obstaculoVivo=False
+    elif xCarrito + 0.05> xObstaculo3 - 0.15 and xCarrito - 0.05 < xObstaculo3 + 0.15 and yCarrito + 0.05 > yObstaculo3 - 0.15 and yCarrito - 0.05 < yObstaculo3 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo4 - 0.15 and xCarrito - 0.05 < xObstaculo4 + 0.15 and yCarrito + 0.05 > yObstaculo4 - 0.15 and yCarrito - 0.05 < yObstaculo4 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo5 - 0.15 and xCarrito - 0.05 < xObstaculo5 + 0.15 and yCarrito + 0.05 > yObstaculo5 - 0.15 and yCarrito - 0.05 < yObstaculo5 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo6 - 0.15 and xCarrito - 0.05 < xObstaculo6 + 0.15 and yCarrito + 0.05 > yObstaculo6 - 0.15 and yCarrito - 0.05 < yObstaculo6 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo7 - 0.15 and xCarrito - 0.05 < xObstaculo7 + 0.15 and yCarrito + 0.05 > yObstaculo7 - 0.15 and yCarrito - 0.05 < yObstaculo7 + 0.15:
+        colisionando = True
+    elif xCarrito + 0.05> xObstaculo8 - 0.15 and xCarrito - 0.05 < xObstaculo8 + 0.15 and yCarrito + 0.05 > yObstaculo8 - 0.15 and yCarrito - 0.05 < yObstaculo8 + 0.15:
+        colisionando = True
+    
         
-    elif xCarrito + 0.05> xbolitas - 0.15 and xCarrito - 0.05 < xbolitas + 0.15 and yCarrito + 0.05 > ybolitas - 0.15 and yCarrito - 0.05 < ybolitas + 0.15:
+    elif xCarrito + 0.05> xbolitas - 0.05 and xCarrito - 0.05 < xbolitas + 0.05 and yCarrito + 0.05 > ybolitas - 0.05 and yCarrito - 0.05 < ybolitas + 0.05:
         obstaculoVivo=False
+
+    elif xCarrito + 0.05> xbolitas2 - 0.05 and xCarrito - 0.05 < xbolitas2 + 0.05 and yCarrito + 0.05 > ybolitas2 - 0.05 and yCarrito - 0.05 < ybolitas2 + 0.05:
+        obstaculoVivo1=False
     else:
         colisionando = False
         #obstaculoVivo=True
@@ -96,11 +150,13 @@ def dibujarObstaculo():
     global yObstaculo
     global xObstaculo2
     global yObstaculo2
+    global xObstaculo9
+    global yObstaculo9
 
     
     glPushMatrix()
     glTranslate(xObstaculo, yObstaculo,0.0)
-    glScale(0.5,0.5,0.0)
+  
     glBegin(GL_QUADS)
         
     glColor3f(0.0,0.5,0.6)
@@ -122,6 +178,77 @@ def dibujarObstaculo():
     glEnd()
     glPopMatrix()
 
+    glPushMatrix()
+    glTranslate(xObstaculo3, yObstaculo3,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xObstaculo4, yObstaculo4,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xObstaculo5, yObstaculo5,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xObstaculo6, yObstaculo6,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    glTranslate(xObstaculo7, yObstaculo7,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+
+    glPopMatrix()
+    glPushMatrix()
+    glTranslate(xObstaculo8, yObstaculo8,0.0)
+    glBegin(GL_QUADS)
+    glColor3f(0.0,0.5,0.6)
+    glVertex3f(-0.15,0.15,0.0)
+    glVertex3f(0.15,0.15,0.0)
+    glVertex3f(0.15,-0.15,0.0)
+    glVertex3f(-0.15,-0.15,0.0)
+    glEnd()
+    glPopMatrix()
+
+    
+
+
+   
+
 def bolitas1():
     global xbolitas
     global ybolitas
@@ -141,22 +268,38 @@ def bolitas1():
     
 
 def bolitas2():
-    glColor3f(1.0,1.0,1.0)
-    glBegin(GL_POLYGON)
-    for x in range(360):
-        angulo = x * 3.14159 / 180.0
-        glVertex3f(cos(angulo) * 0.02 -0.68, sin(angulo) * 0.02 + 0.88, 0.0)
-
-    glEnd()
+    global xbolitas2
+    global ybolitas2
+    global obstaculoVivo1
+    if obstaculoVivo1:
+        glPushMatrix()
+        glTranslate(xbolitas2, ybolitas2,0.0)
+        glScale(0.2,0.2,0.2)
+        glBegin(GL_QUADS)
+        glColor3f(1.0,1.0,1.6)
+        glVertex3f(-0.15,0.15,0.0)
+        glVertex3f(0.15,0.15,0.0)
+        glVertex3f(0.15,-0.15,0.0)
+        glVertex3f(-0.15,-0.15,0.0)
+        glEnd()
+        glPopMatrix()
 
 def bolitas3():
-    glColor3f(1.0,1.0,1.0)
-    glColor3f(1.0,1.0,1.0)
-    glBegin(GL_POLYGON)
-    for x in range(360):
-        angulo = x * 3.14159 / 180.0
-        glVertex3f(cos(angulo) * 0.02 -0.48, sin(angulo) * 0.02 + 0.88, 0.0)
-    glEnd()
+    global xbolitas3
+    global ybolitas3
+    global obstaculoVivo
+    if obstaculoVivo:
+        glPushMatrix()
+        glTranslate(xbolitas3, ybolitas3,0.0)
+        glScale(0.2,0.2,0.2)
+        glBegin(GL_QUADS)
+        glColor3f(1.0,1.0,1.6)
+        glVertex3f(-0.15,0.15,0.0)
+        glVertex3f(0.15,0.15,0.0)
+        glVertex3f(0.15,-0.15,0.0)
+        glVertex3f(-0.15,-0.15,0.0)
+        glEnd()
+        glPopMatrix()
 
 def boca():
  
