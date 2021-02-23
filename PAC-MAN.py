@@ -685,6 +685,7 @@ def actualizar(window):
         yCarrito = yCarrito + 0.2
         direccion = 0
         rotacionC = 90 - desfase
+        playsound.playsound('pacman-waka-waka.mp3', True) 
         #playsound.playsound('pacman-waka-waka.mp3', True)
         #playsound.playsound('pacman-waka-waka.mp3', True)
     
