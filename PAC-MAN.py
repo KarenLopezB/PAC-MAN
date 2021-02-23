@@ -439,32 +439,34 @@ def checar_colisiones():
         colisionando = True
         exit()
 
-    elif xCarrito + 0.05> xFantasma - 0.15 and xCarrito - 0.05 < xFantasma + 0.15 and yCarrito + 0.05 > yFantasma - 0.15 and yCarrito - 0.05 < yFantasma + 0.15:
+    #fantasmas
+
+    elif xCarrito + 0.05> xFantasma - 0.09 and xCarrito - 0.05 < xFantasma + 0.09 and yCarrito + 0.05 > yFantasma - 0.09 and yCarrito - 0.05 < yFantasma + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()
 
-    elif xCarrito + 0.05> xFantasma1 - 0.15 and xCarrito - 0.05 < xFantasma1 + 0.15 and yCarrito + 0.05 > yFantasma1 - 0.15 and yCarrito - 0.05 < yFantasma1 + 0.15:
+    elif xCarrito + 0.05> xFantasma1 - 0.09 and xCarrito - 0.05 < xFantasma1 + 0.09 and yCarrito + 0.05 > yFantasma1 - 0.09 and yCarrito - 0.05 < yFantasma1 + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()
     
-    elif xCarrito + 0.05> xFantasma2 - 0.15 and xCarrito - 0.05 < xFantasma2 + 0.15 and yCarrito + 0.05 > yFantasma2 - 0.15 and yCarrito - 0.05 < yFantasma2 + 0.15:
+    elif xCarrito + 0.05> xFantasma2 - 0.09 and xCarrito - 0.05 < xFantasma2 + 0.09 and yCarrito + 0.05 > yFantasma2 - 0.09 and yCarrito - 0.05 < yFantasma2 + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()
         
-    elif xCarrito + 0.05> xFantasma3 - 0.15 and xCarrito - 0.05 < xFantasma3 + 0.15 and yCarrito + 0.05 > yFantasma3 - 0.15 and yCarrito - 0.05 < yFantasma3 + 0.15:
+    elif xCarrito + 0.05> xFantasma3 - 0.09 and xCarrito - 0.05 < xFantasma3 + 0.09 and yCarrito + 0.05 > yFantasma3 - 0.09 and yCarrito - 0.05 < yFantasma3 + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()    
 
-    elif xCarrito + 0.05> xFantasma4 - 0.15 and xCarrito - 0.05 < xFantasma4 + 0.15 and yCarrito + 0.05 > yFantasma4 - 0.15 and yCarrito - 0.05 < yFantasma4 + 0.15:
+    elif xCarrito + 0.05> xFantasma4 - 0.09 and xCarrito - 0.05 < xFantasma4 + 0.09 and yCarrito + 0.05 > yFantasma4 - 0.09 and yCarrito - 0.05 < yFantasma4 + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit() 
 
-    elif xCarrito + 0.05> xFantasma5 - 0.15 and xCarrito - 0.05 < xFantasma5 + 0.15 and yCarrito + 0.05 > yFantasma5 - 0.15 and yCarrito - 0.05 < yFantasma5 + 0.15:
+    elif xCarrito + 0.05> xFantasma5 - 0.09 and xCarrito - 0.05 < xFantasma5 + 0.09 and yCarrito + 0.05 > yFantasma5 - 0.09 and yCarrito - 0.05 < yFantasma5 + 0.09:
         playsound.playsound('pacman-dies.mp3', True)        
         colisionando = True
         exit()    
@@ -697,9 +699,9 @@ def actualizar(window):
     xFantasma = xFantasma +0.01 * xFantasmaR
 
     
-    yFantasmaR2 = sin(random.random())
+    yFantasmaR2 = sin(60)#*random.random()
     yFantasma2 = yFantasma2 -0.005 * yFantasmaR2
-    xFantasmaR2 = cos(random.random())
+    xFantasmaR2 = cos(90)#*random.random()
     xFantasma2 = xFantasma2 + 0.01 * xFantasmaR2
 
     yFantasmaR3 = random.random()
@@ -707,9 +709,9 @@ def actualizar(window):
     xFantasmaR3 = random.random()
     xFantasma3 = xFantasma3 * cos(xFantasmaR3)
 
-    yFantasmaR4 = random.random()
+    yFantasmaR4 = sin(30)*random.random()
     yFantasma4 = yFantasma4 -0.005 * yFantasmaR4
-    xFantasmaR4 = random.random()
+    xFantasmaR4 = cos(30)*random.random()
     xFantasma4 = xFantasma4 * cos(xFantasmaR4)
 
     yFantasmaR5 = random.random()
@@ -2494,6 +2496,29 @@ def letras():
     glBegin(GL_LINES)
     glColor3f(0.8, 0.5, 0.3)
     glVertex(-0.99, 0.96, 0.0)
+    glVertex(0.99, 0.96, 0.0)
+    #glVertex(0.9, -0.8, 0.0)
+    #glVertex(0.05, -0.0, 0.0)
+    glEnd()
+    glPopMatrix()
+
+    
+    glPushMatrix()
+    #glTranslate(-1,-0.9,0.0)
+    glBegin(GL_LINES)
+    glColor3f(0.8, 0.5, 0.3)
+    glVertex(-0.99, -0.96, 0.0)
+    glVertex(-0.99, 0.96, 0.0)
+    #glVertex(0.9, -0.8, 0.0)
+    #glVertex(0.05, -0.0, 0.0)
+    glEnd()
+    glPopMatrix()
+
+    glPushMatrix()
+    #glTranslate(-1,-0.9,0.0)
+    glBegin(GL_LINES)
+    glColor3f(0.8, 0.5, 0.3)
+    glVertex(0.99, -0.96, 0.0)
     glVertex(0.99, 0.96, 0.0)
     #glVertex(0.9, -0.8, 0.0)
     #glVertex(0.05, -0.0, 0.0)
