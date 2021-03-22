@@ -1,5 +1,6 @@
 from OpenGL.GL import *
 from glew_wish import *
+from math import* 
 import glfw
  
 
