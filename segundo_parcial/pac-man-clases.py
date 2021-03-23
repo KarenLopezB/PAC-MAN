@@ -10,6 +10,10 @@ from Fantasma4 import *
 from Fantasma5 import *
 from Fantasma3 import *
 from Fantasma2 import *
+from Obstaculo import *
+from Letras import *
+
+
 
 
 #fantasma3 = Fantasma3()
@@ -21,12 +25,31 @@ fantasma4 = Fantasma4()
 fantasma5 = Fantasma5()
 fantasma3 = Fantasma3()
 fantasma2 = Fantasma2()
+letras = Letras()
 
+obstaculos = []
+
+def inicializarObstaculos():
+    global obstaculos
+    #
+    #agregar todos los obstaculos con las posiciones debidas
+    obstaculos.append(Obstaculo(-0.65,0.6))
+    obstaculos.append(Obstaculo(-0.15,0.6))
+    obstaculos.append(Obstaculo(0.45,0.6))
+    obstaculos.append(Obstaculo(0.95,0.6))
+    obstaculos.append(Obstaculo(-1.0,0.0))
+    obstaculos.append(Obstaculo(-0.45,0.0))
+    obstaculos.append(Obstaculo(0.4,0.0))
+    obstaculos.append(Obstaculo(0.7,0.0))
+    obstaculos.append(Obstaculo(-0.25,-0.6))
+    obstaculos.append(Obstaculo(0.55,-0.6))
+    obstaculos.append(Obstaculo(-0.9,-0.6))
 
 
 def actualizar(window):
     global monito
     global fantasma
+    global obstaculos
     #global fantasma6
     #global fantasma3
 
@@ -44,18 +67,30 @@ def actualizar(window):
     monito.checar_colisiones5(fantasma5)
     monito.checar_colisiones3(fantasma3)
     monito.checar_colisiones2(fantasma2)
-    #monito.colision5(fantasma5)
+    
+    for obstaculo in obstaculos:
+        monito.checar_colisiones_obstaculos(obstaculo)
+        #exit()
+        #monito.checar_colisiones(obstaculo)
+          #  if monito.colisionando:
+               # break
+        
+        
 
 def dibujar():
     global monito
     global fantasma
-    
+    global obstaculos
     #global fantasma3
     global fantasma6
     global fantasma4
     global fantasma5
     global fantasma3
     global fantasma2
+    global letras
+    letras.dibujar()
+    for obstaculo in obstaculos:
+        obstaculo.dibujar()
     fantasma6.dibujar()
     fantasma5.dibujar()
     fantasma4.dibujar()
@@ -63,6 +98,9 @@ def dibujar():
     fantasma2.dibujar()
     monito.dibujar()
     fantasma.dibujar()
+
+    
+    
     #fantasma2.dibujar()
     #fantasma3.dibujar()
 
@@ -73,7 +111,7 @@ def main():
     
     #crea la ventana, 
     # independientemente del SO que usemos
-    window = glfw.create_window(700,700,"PAC-MIN", None, None)
+    window = glfw.create_window(700,700,"PacMan-Apocaliptico", None, None)
 
     #Configuramos OpenGL
     glfw.window_hint(glfw.SAMPLES, 4)
@@ -104,6 +142,8 @@ def main():
 
     version_shaders = glGetString(GL_SHADING_LANGUAGE_VERSION)
     print(version_shaders)
+
+    inicializarObstaculos()
 
     while not glfw.window_should_close(window):
         #Establece regiond e dibujo

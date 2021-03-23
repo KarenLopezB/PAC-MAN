@@ -12,6 +12,7 @@ from Fantasma5 import *
 from Fantasma4 import *
 from Fantasma3 import *
 from Fantasma2 import *
+#from Obstaculo import *
 
 fantasma6 = Fantasma6()
 fantasma5 = Fantasma5()
@@ -19,6 +20,7 @@ fantasma4 = Fantasma4()
 fantasma3 = Fantasma3()
 fantasma2 = Fantasma2()
 fantasma = Fantasmas()
+#obstaculo = Obstaculo()
 
 class Monito:
     posicionX = 0.0
@@ -86,6 +88,7 @@ class Monito:
             self.posicionX = self.posicionX - 0.2
             self.direccion = 2
             self.rotacion = 0 - self.desfase
+            playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', False)
             #playsound.playsound('pacman-waka-waka.mp3', True)
             #playsound.playsound('pacman-waka-waka.mp3', True) 
@@ -93,21 +96,38 @@ class Monito:
             self.posicionX = self.posicionX + 0.2
             self.direccion = 1
             self.rotacion = 180 - self.desfase
+            playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True)
         if estadoAbajo == glfw.PRESS and self.colisionando == False:
             self.posicionY = self.posicionY - 0.2
             self.direccion = 3
             self.rotacion = 90 - self.desfase
+            playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True)
         if estadoArriba == glfw.PRESS and self.colisionando == False:
             self.posicionY = self.posicionY + 0.2
             self.direccion = 0
             self.rotacion = 270 - self.desfase
+            playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True) 
             #playsound.playsound('pacman-waka-waka.mp3', True)
             #playsound.playsound('pacman-waka-waka.mp3', True)
+    
+
+    def checar_colisiones_obstaculos(self, obstaculo):
+        if self.posicionX + 0.05 > obstaculo.posicionX - 0.15 and self.posicionX - 0.05 < obstaculo.posicionX + 0.15 and self.posicionY + 0.05 > obstaculo.posicionY - 0.15 and self.posicionY - 0.05 < obstaculo.posicionY + 0.15:
+            self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
+            exit()
+        else:
+            self.colisionando = False
+        
+        
+       
+        
+       
 
     def checar_colisiones(self, fantasma):
         #global fantasma
@@ -118,6 +138,7 @@ class Monito:
         if self.posicionX + 0.05> fantasma.posicionX - 0.09 and self.posicionX - 0.05 < fantasma.posicionX + 0.09 and self.posicionY + 0.05 > fantasma.posicionY - 0.09 and self.posicionY - 0.05 < fantasma.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
 
     def checar_colisiones6(self, fantasma6):
@@ -129,6 +150,7 @@ class Monito:
         if self.posicionX + 0.05> fantasma6.posicionX - 0.09 and self.posicionX - 0.05 < fantasma6.posicionX + 0.09 and self.posicionY + 0.05 > fantasma6.posicionY - 0.09 and self.posicionY - 0.05 < fantasma6.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
     def checar_colisiones4(self, fantasma4):
         #global fantasma
@@ -139,6 +161,7 @@ class Monito:
         if self.posicionX + 0.05> fantasma4.posicionX - 0.09 and self.posicionX - 0.05 < fantasma4.posicionX + 0.09 and self.posicionY + 0.05 > fantasma4.posicionY - 0.09 and self.posicionY - 0.05 < fantasma4.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
     
     def checar_colisiones5(self, fantasma5):
@@ -150,6 +173,7 @@ class Monito:
         if self.posicionX + 0.05> fantasma5.posicionX - 0.09 and self.posicionX - 0.05 < fantasma5.posicionX + 0.09 and self.posicionY + 0.05 > fantasma5.posicionY - 0.09 and self.posicionY - 0.05 < fantasma5.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
     
     def checar_colisiones3(self, fantasma3):
@@ -158,6 +182,7 @@ class Monito:
         if self.posicionX + 0.05> fantasma3.posicionX - 0.09 and self.posicionX - 0.05 < fantasma3.posicionX + 0.09 and self.posicionY + 0.05 > fantasma3.posicionY - 0.09 and self.posicionY - 0.05 < fantasma3.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
 
     def checar_colisiones2(self, fantasma2):
@@ -166,7 +191,13 @@ class Monito:
         if self.posicionX + 0.05> fantasma2.posicionX - 0.09 and self.posicionX - 0.05 < fantasma2.posicionX + 0.09 and self.posicionY + 0.05 > fantasma2.posicionY - 0.09 and self.posicionY - 0.05 < fantasma2.posicionY + 0.09:
             #playsound.playsound('pacman-dies.mp3', True)        
             self.colisionando = True
+            playsound.playsound('pacman-dies.mp3', True)        
             exit()
+        else:
+            self.colisionando=False
+        
+  
+        
         
         
 
