@@ -12,7 +12,7 @@ class Bolita:
     posicionY = 0.0
     vivo = True
 
-    def _init_(self, x, y):
+    def __init__(self, x, y):
         self.posicionX = x
         self.posicionY = y
 

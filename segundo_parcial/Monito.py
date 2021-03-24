@@ -12,6 +12,7 @@ from Fantasma5 import *
 from Fantasma4 import *
 from Fantasma3 import *
 from Fantasma2 import *
+from Bolita import *
 #from Obstaculo import *
 
 fantasma6 = Fantasma6()
@@ -20,6 +21,7 @@ fantasma4 = Fantasma4()
 fantasma3 = Fantasma3()
 fantasma2 = Fantasma2()
 fantasma = Fantasmas()
+#bolita = Bolita()
 #obstaculo = Obstaculo()
 
 class Monito:
@@ -123,6 +125,11 @@ class Monito:
             exit()
         else:
             self.colisionando = False
+
+    def checar_colisiones_bolitas(self,bolita):
+        if self.posicionX + 0.05> bolita.posicionX - 0.05 and self.posicionX - 0.05 < bolita.posicionX + 0.05 and self.posicionY + 0.05 > bolita.posicionY - 0.05 and self.posicionY - 0.05 < bolita.posicionY + 0.05:
+           bolita.vivo=False
+
         
         
        
@@ -195,6 +202,8 @@ class Monito:
             exit()
         else:
             self.colisionando=False
+
+    
         
   
         

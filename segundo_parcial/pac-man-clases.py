@@ -31,6 +31,7 @@ obstaculos = []
 
 def inicializarObstaculos():
     global obstaculos
+    
     #
     #agregar todos los obstaculos con las posiciones debidas
     obstaculos.append(Obstaculo(-0.65,0.6))
@@ -44,6 +45,7 @@ def inicializarObstaculos():
     obstaculos.append(Obstaculo(-0.25,-0.6))
     obstaculos.append(Obstaculo(0.55,-0.6))
     obstaculos.append(Obstaculo(-0.9,-0.6))
+    
 
 def inicializarBolitas():
     global bolitas
@@ -102,6 +104,7 @@ def actualizar(window):
     global monito
     global fantasma
     global obstaculos
+    global bolitas
     #global fantasma6
     #global fantasma3
 
@@ -128,7 +131,9 @@ def actualizar(window):
                # break
         
     for bolita in bolitas:
-        monito.checar_colisiones_bolitas(bolitas)
+        if bolita.vivo:
+            monito.checar_colisiones_bolitas(bolita)
+            
 
 def dibujar():
     global monito
@@ -200,6 +205,7 @@ def main():
     print(version_shaders)
 
     inicializarObstaculos()
+    inicializarBolitas()
 
     while not glfw.window_should_close(window):
         #Establece regiond e dibujo
