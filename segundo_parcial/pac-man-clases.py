@@ -12,9 +12,9 @@ from Fantasma3 import *
 from Fantasma2 import *
 from Obstaculo import *
 from Letras import *
+from Bolita import *
 
-
-
+bolitas = []
 
 #fantasma3 = Fantasma3()
 monito = Monito()
@@ -45,6 +45,58 @@ def inicializarObstaculos():
     obstaculos.append(Obstaculo(0.55,-0.6))
     obstaculos.append(Obstaculo(-0.9,-0.6))
 
+def inicializarBolitas():
+    global bolitas
+    bolitas.append(Bolita(-0.88, 0.88))
+    bolitas.append(Bolita(-0.68, 0.88))
+    bolitas.append(Bolita(-0.48, 0.88))
+    bolitas.append(Bolita(-0.28, 0.88))
+    bolitas.append(Bolita(-0.08, 0.88))
+    bolitas.append(Bolita(0.12, 0.88))
+    bolitas.append(Bolita(0.32, 0.88))
+    bolitas.append(Bolita(0.52, 0.88))
+    bolitas.append(Bolita(0.72, 0.88))
+    bolitas.append(Bolita(0.92, 0.88))
+    bolitas.append(Bolita(-0.88, 0.30))
+    bolitas.append(Bolita(-0.68, 0.30))
+    bolitas.append(Bolita(-0.48, 0.30))
+    bolitas.append(Bolita(-0.28, 0.30))
+    bolitas.append(Bolita(-0.08, 0.30))
+    bolitas.append(Bolita(0.12, 0.30))
+    bolitas.append(Bolita(0.32, 0.30))
+    bolitas.append(Bolita(0.52, 0.30))
+    bolitas.append(Bolita(0.72, 0.30))
+    bolitas.append(Bolita(0.92, 0.30))
+    bolitas.append(Bolita(-0.88, -0.30))
+    bolitas.append(Bolita(-0.68, -0.30))
+    bolitas.append(Bolita(-0.48, -0.30))
+    bolitas.append(Bolita(-0.28, -0.30))
+    bolitas.append(Bolita(-0.08, -0.30))
+    bolitas.append(Bolita(0.12, -0.30))
+    bolitas.append(Bolita(0.32, -0.30))
+    bolitas.append(Bolita(0.52, -0.30))
+    bolitas.append(Bolita(0.72, -0.30))
+    bolitas.append(Bolita(0.92, -0.30))
+    bolitas.append(Bolita(-0.88, -0.87))
+    bolitas.append(Bolita(-0.68, -0.87))
+    bolitas.append(Bolita(0.48, -0.87))
+    bolitas.append(Bolita(-0.28, -0.87))
+    bolitas.append(Bolita(0.32, -0.87))
+    bolitas.append(Bolita(0.52, -0.87))
+    bolitas.append(Bolita(0.72, -0.87))
+    bolitas.append(Bolita(0.92, -0.87))
+    bolitas.append(Bolita(-0.89, 0.60))
+    bolitas.append(Bolita(-0.39, 0.60))
+    bolitas.append(Bolita(0.15, 0.60))
+    bolitas.append(Bolita(0.70, 0.60))
+    bolitas.append(Bolita(-0.72, 0.00))
+    bolitas.append(Bolita(0.10, 0.00))
+    bolitas.append(Bolita(-0.15, 0.00))
+    bolitas.append(Bolita(0.93, 0.00))
+    bolitas.append(Bolita(-0.58, -0.6))
+    bolitas.append(Bolita(0.05, -0.6))
+    bolitas.append(Bolita(0.25, -0.6))
+    bolitas.append(Bolita(0.85, -0.6))
 
 def actualizar(window):
     global monito
@@ -75,7 +127,8 @@ def actualizar(window):
           #  if monito.colisionando:
                # break
         
-        
+    for bolita in bolitas:
+        monito.checar_colisiones_bolitas(bolitas)
 
 def dibujar():
     global monito
@@ -88,6 +141,9 @@ def dibujar():
     global fantasma3
     global fantasma2
     global letras
+    global bolitas
+    for bolita in bolitas:
+        bolita.dibujar()
     letras.dibujar()
     for obstaculo in obstaculos:
         obstaculo.dibujar()
